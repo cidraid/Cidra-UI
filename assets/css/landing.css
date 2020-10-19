@@ -1,0 +1,72 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+}
+
+.top-container{
+    background-color: #E44658;
+}
+
+.navbar-toggler{
+    border : none;
+    outline : none;
+}
+
+.navbar-toggler:focus{
+    border : none;
+    outline : none;
+}
+
+
+
+.main-illustration{
+    height : 380px;
+    width: 317px;
+}
+
+.tagline-title{
+    font-weight: 600;
+}
+
+.tagline-subtitle{
+    font-weight:500;
+}
+
+.card-img-top{
+    object-fit : cover;
+    height : 150px;
+}
+
+
+.why-illustration{
+    width : 378px;
+}
+
+.why-item{
+    font-weight: 500;
+}
+
+
+.testimonial-user{
+    border-radius: 50%;
+    object-fit: cover;
+    height : 35px;
+    width : 35px;
+}
+
+@media screen and (max-width : 599px) {
+    .newsletter-text{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width : 600px) {
+    .newsletter-text{
+        margin-top: 100px;
+    }
+}
+
+
+.btn{
+    text-transform: none;
+}
