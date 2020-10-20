@@ -18,7 +18,6 @@ body{
 }
 
 
-
 .main-illustration{
     height : 380px;
     width: 317px;
@@ -58,11 +57,20 @@ body{
     .newsletter-text{
         margin-top: 20px;
     }
+
+    .card{
+        width : 75%;
+    }
 }
 
 @media screen and (min-width : 600px) {
     .newsletter-text{
         margin-top: 100px;
+       
+    }
+
+    .card{
+        width : 80%;
     }
 }
 
