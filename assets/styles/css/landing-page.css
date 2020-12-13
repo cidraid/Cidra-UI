@@ -23,7 +23,7 @@ header {
 
 header .navbar {
   background-color: #e44658;
-  padding: 4.6rem 1.2rem !important;
+  padding: 4.6rem 21.5rem !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -207,6 +207,52 @@ header .view-content #btn-start {
 
 #main-content .course-list .card:nth-child(2) h4 {
   width: 16.4rem;
+}
+
+#main-content .benefit {
+  color: #1d1d11;
+  padding-bottom: 25.6rem;
+}
+
+#main-content .benefit-header {
+  font-size: 7rem;
+  font-weight: 600;
+  width: 44.7rem;
+  margin-bottom: 0;
+}
+
+#main-content .benefit-caption {
+  font-size: 3.2rem;
+  font-weight: 300;
+  width: 44.7rem;
+  margin-bottom: 6.4rem;
+}
+
+#main-content .benefit-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 7.5rem;
+}
+
+#main-content .benefit-list img {
+  margin-right: 4.6rem;
+}
+
+#main-content .benefit-list p {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 300;
+  background-color: #fff;
+  padding: 1.2rem 6rem;
+  width: 31.1rem;
+  margin-bottom: 0;
+  -webkit-box-shadow: 0 1rem 3.2rem #eaeaea;
+          box-shadow: 0 1rem 3.2rem #eaeaea;
+  border-radius: 1.5rem;
 }
 
 @media screen and (min-width: 1200px) {
