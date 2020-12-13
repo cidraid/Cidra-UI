@@ -1,3 +1,11 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -15,28 +23,28 @@ header {
 
 header .navbar {
   background-color: #e44658;
-  padding: 2.875rem 0.75rem !important;
+  padding: 4.6rem 1.2rem !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 header .navbar-brand img {
-  height: 46px;
-  width: 177px;
+  height: 4.6rem;
+  width: 17.7rem;
 }
 
 header .navbar #btn-register,
 header .navbar #btn-login {
-  font-size: 1.5rem;
-  width: 146px;
+  font-size: 2.4rem;
+  width: 14.6rem;
   text-align: center;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
 }
 
 header .navbar #btn-register {
   color: #fff;
   font-weight: 400;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
 }
 
 header .navbar #btn-login {
@@ -61,10 +69,11 @@ header .view-inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5rem;
 }
 
 header .view-content {
-  width: 600px;
+  width: 60rem;
   text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,32 +91,125 @@ header .view-content {
 }
 
 header .view-content h1 {
-  font-size: 70px;
+  font-size: 7rem;
   font-weight: 700;
-  line-height: 106px;
-  margin-bottom: 1rem;
+  line-height: 10.6rem;
+  margin-bottom: 1.2rem;
 }
 
 header .view-content p {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
-  line-height: 35px;
-  width: 472px;
-  margin-bottom: 36px;
 }
 
 header .view-content #btn-start {
   background-color: #fff;
   color: #1d1d11;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   -webkit-box-shadow: none;
           box-shadow: none;
-  width: 172px;
+  width: 17.2rem;
+  margin: 3.6rem 0 0 0;
 }
 
-@media only screen and (min-width: 1200px) {
+#main-content {
+  background-color: #f5f5f7;
+}
+
+#main-content .course {
+  color: #1d1d11;
+  padding-top: 13.2rem;
+  padding: 13.2rem 1.2rem 15.6rem 1.2rem;
+}
+
+#main-content .course-header {
+  text-align: center;
+  padding-bottom: 6.4rem;
+  font-size: 4.6rem;
+  font-weight: 500;
+}
+
+#main-content .course-header span {
+  font-weight: 600;
+  color: #e44658;
+}
+
+#main-content .course-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main-content .course-list .card {
+  max-width: 42.7rem;
+  height: 48.5rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 2rem;
+}
+
+#main-content .course-list .card-img-top {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  z-index: 1;
+}
+
+#main-content .course-list .card-body {
+  z-index: 10;
+}
+
+#main-content .course-list .card-title {
+  font-size: 4.6rem;
+  font-weight: 600;
+  margin: 17.7rem 0 1.6rem 0;
+}
+
+#main-content .course-list .card-text {
+  font-size: 1.6rem;
+  color: inherit;
+  margin-bottom: 4.6rem;
+}
+
+#main-content .course-list .card-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-content .course-list .card-author .author-image {
+  margin-right: 1.6rem;
+  width: 4.6rem;
+  height: 4.6rem;
+}
+
+#main-content .course-list .card-author .author-detail {
+  font-size: 1.6rem;
+}
+
+#main-content .course-list .card-author .author-detail p {
+  margin-bottom: 0;
+}
+
+#main-content .course-list .card-author .author-detail p:nth-child(1) {
+  color: #1d1d11;
+  font-weight: 500;
+}
+
+#main-content .course-list .card-author .author-detail p:nth-child(2) {
+  color: #868686;
+  font-weight: 400;
+}
+
+#main-content .course-list .card:nth-child(2) h4 {
+  width: 16.4rem;
+}
+
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 1490px !important;
   }
