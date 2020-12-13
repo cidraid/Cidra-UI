@@ -4,12 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cidra.id</title>
-		<link rel="stylesheet" href="/assets/styles/css/landing.css" />
 
+		<link rel="icon" href="/assets/images/icons/cidra-logo.png" />
+
+		<!-- Landing Page CSS -->
+		<link rel="stylesheet" href="/assets/styles/css/landing-page.css" />
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
 		<!-- Google Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- Bootstrap core CSS -->
 		<link
 			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -19,7 +26,73 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
 	</head>
 	<body>
-		<my-test></my-test>
+		<!--Main Navigation-->
+		<header class="container-fluid">
+			<nav class="container navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+				<a class="navbar-brand" href="#"><img src="/assets/images/png/brand-logo.png" alt="cidra-logo" /></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" id="btn-register" class="btn m-0" href="#">DAFTAR</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="btn-login" class="btn m-0" href="#">MASUK</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="container view intro-2">
+				<div class="mask flex-center">
+					<div class="view-inner container text-center white-text wow fadeInUp p-0 mt-5">
+						<img
+							class="view-image"
+							src="/assets/images/svg/header-illustration.svg"
+							alt="man with a rocket illustration"
+						/>
+						<div class="view-content">
+							<h1>Cari dan Pelajari Skill Baru dengan Cidra</h1>
+							<p>Kuasai berbagai kemampuan dasar secara gratis dan persiapkan diri kamu menuju karir profesional</p>
+							<button type="button" id="btn-start" class="btn m-0">MULAI</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--Main Navigation-->
+
+		<!--Main Layout-->
+		<main class="text-center py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p align="justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+							fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+							esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+							qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--Main Layout-->
 
 		<!-- JQuery -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,6 +111,6 @@
 			type="text/javascript"
 			src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
 		></script>
-		<script src="/assets/scripts/components/landing/test.js"></script>
+		<script src="/assets/scripts/landing-page.js"></script>
 	</body>
 </html>

@@ -1,0 +1,97 @@
+@import './utils/variable';
+
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+html,
+body,
+header,
+.view {
+	height: 100%;
+}
+
+header {
+	background-color: $primary-color;
+
+	.navbar {
+		background-color: $primary-color;
+		padding: 2.875rem 0.75rem !important;
+		box-shadow: none;
+
+		&-brand img {
+			height: 46px;
+			width: 177px;
+		}
+
+		#btn-register,
+		#btn-login {
+			font-size: 1.5rem;
+			width: 146px;
+			text-align: center;
+			border-radius: 0.5rem;
+		}
+
+		#btn-register {
+			color: #fff;
+			font-weight: 400;
+			margin-right: 1rem;
+		}
+
+		#btn-login {
+			background-color: #fff;
+			color: $primary-color;
+			font-weight: 600;
+		}
+	}
+
+	.view {
+		&-inner {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-content {
+			width: 600px;
+			text-align: right;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			align-items: flex-end;
+
+			h1 {
+				font-size: 70px;
+				font-weight: 700;
+				line-height: 106px;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				font-size: 24px;
+				font-weight: 400;
+				line-height: 35px;
+				width: 472px;
+				margin-bottom: 36px;
+			}
+
+			#btn-start {
+				background-color: #fff;
+				color: #1d1d11;
+				font-size: 24px;
+				font-weight: 600;
+				border-radius: 8px;
+				box-shadow: none;
+				width: 172px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.container {
+		max-width: 1490px !important;
+	}
+}
