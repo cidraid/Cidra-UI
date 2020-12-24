@@ -23,6 +23,7 @@ header,
 // Header Section
 header {
 	background-color: $primary-color;
+	padding: 0 !important;
 
 	.navbar {
 		background-color: $primary-color;
@@ -62,7 +63,9 @@ header {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			margin-top: 5rem;
+			margin: 5rem 0 0 0;
+			padding: 0 11.2% !important;
+			max-width: 100% !important;
 		}
 
 		&-content {
@@ -243,6 +246,106 @@ header {
 				font-size: 1.6em;
 				padding: 1rem 1.6rem;
 				width: 10rem;
+			}
+		}
+
+		.view {
+			&-inner {
+				padding: 0 8% !important;
+			}
+
+			&-content {
+				h1 {
+					font-size: 5.4rem;
+					line-height: 7rem;
+				}
+			}
+
+			&-image {
+				max-width: 60rem;
+
+				@media screen and (max-width: 1430px) {
+					max-width: 50rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	header {
+		.view {
+			&-content {
+				h1 {
+					font-size: 4.8rem;
+					line-height: 7rem;
+				}
+			}
+
+			&-image {
+				max-width: 40rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	header {
+		.view {
+			&-content {
+				width: 50rem;
+
+				h1 {
+					font-size: 3.2rem;
+					line-height: 5rem;
+				}
+			}
+
+			&-image {
+				max-width: 30rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	header {
+		.nav-item {
+			margin-left: auto;
+
+			a {
+				margin: 0 0 1.2rem 0 !important;
+			}
+		}
+
+		.view {
+			&-inner {
+				justify-content: center;
+			}
+
+			&-content {
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+
+				h1 {
+					text-align: center;
+					font-size: 4.8rem;
+					line-height: 6rem;
+					margin-bottom: 5rem;
+				}
+
+				p:nth-child(4) {
+					margin-bottom: 5rem;
+				}
+
+				#btn-start {
+					margin-top: 0;
+				}
+			}
+
+			&-image {
+				display: none !important;
 			}
 		}
 	}

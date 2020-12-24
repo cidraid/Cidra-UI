@@ -21,6 +21,7 @@ header,
 
 header {
   background-color: #e44658;
+  padding: 0 !important;
 }
 
 header .navbar {
@@ -71,7 +72,9 @@ header .view-inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5rem;
+  margin: 5rem 0 0 0;
+  padding: 0 11.2% !important;
+  max-width: 100% !important;
 }
 
 header .view-content {
@@ -266,6 +269,83 @@ header .view-content #btn-start {
     font-size: 1.6em;
     padding: 1rem 1.6rem;
     width: 10rem;
+  }
+  header .view-inner {
+    padding: 0 8% !important;
+  }
+  header .view-content h1 {
+    font-size: 5.4rem;
+    line-height: 7rem;
+  }
+  header .view-image {
+    max-width: 60rem;
+  }
+}
+
+@media screen and (max-width: 1600px) and (max-width: 1430px) {
+  header .view-image {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header .view-content h1 {
+    font-size: 4.8rem;
+    line-height: 7rem;
+  }
+  header .view-image {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header .view-content {
+    width: 50rem;
+  }
+  header .view-content h1 {
+    font-size: 3.2rem;
+    line-height: 5rem;
+  }
+  header .view-image {
+    max-width: 30rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .nav-item {
+    margin-left: auto;
+  }
+  header .nav-item a {
+    margin: 0 0 1.2rem 0 !important;
+  }
+  header .view-inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .view-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  header .view-content h1 {
+    text-align: center;
+    font-size: 4.8rem;
+    line-height: 6rem;
+    margin-bottom: 5rem;
+  }
+  header .view-content p:nth-child(4) {
+    margin-bottom: 5rem;
+  }
+  header .view-content #btn-start {
+    margin-top: 0;
+  }
+  header .view-image {
+    display: none !important;
   }
 }
 
