@@ -10,6 +10,7 @@ body {
 
 * {
 	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
 }
 
 html,
@@ -25,7 +26,7 @@ header {
 
 	.navbar {
 		background-color: $primary-color;
-		padding: 4.6rem 21.5rem !important;
+		padding: 2.4% 11.2% !important;
 		box-shadow: none;
 
 		&-brand img {
@@ -231,6 +232,21 @@ header {
 	}
 }
 // End Main Section
+
+@media screen and (max-width: 1600px) {
+	header {
+		.navbar {
+			padding: 1% 8% !important;
+
+			#btn-register,
+			#btn-login {
+				font-size: 1.6em;
+				padding: 1rem 1.6rem;
+				width: 10rem;
+			}
+		}
+	}
+}
 
 @media screen and (min-width: 1200px) {
 	.container {
