@@ -133,6 +133,7 @@ header .view-content #btn-start {
   padding-bottom: 6.4rem;
   font-size: 4.6rem;
   font-weight: 500;
+  margin: 0;
 }
 
 #main-content .course-header span {
@@ -152,8 +153,6 @@ header .view-content #btn-start {
 }
 
 #main-content .course-list .card {
-  max-width: 42.7rem;
-  height: 48.5rem;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 2rem;
@@ -167,6 +166,7 @@ header .view-content #btn-start {
 
 #main-content .course-list .card-body {
   z-index: 10;
+  padding: 0 2rem !important;
 }
 
 #main-content .course-list .card-title {
@@ -185,6 +185,7 @@ header .view-content #btn-start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 2.5rem;
 }
 
 #main-content .course-list .card-author .author-image {
@@ -211,8 +212,16 @@ header .view-content #btn-start {
   font-weight: 400;
 }
 
-#main-content .course-list .card:nth-child(2) h4 {
-  width: 16.4rem;
+#main-content .course-list .col:nth-child(1) .card-text {
+  max-width: 30rem;
+}
+
+#main-content .course-list .col:nth-child(2) .card-title {
+  max-width: 17rem;
+}
+
+#main-content .course-list .col:nth-child(2) .card-text {
+  max-width: 25rem;
 }
 
 #main-content .benefit {
@@ -305,6 +314,9 @@ header .view-content #btn-start {
   #main-content .course-list .card-text {
     font-size: 1.4rem;
   }
+  #main-content .course-list .col:nth-child(1) .card-text {
+    max-width: 27rem;
+  }
 }
 
 @media screen and (max-width: 1366px) {
@@ -321,14 +333,15 @@ header .view-content #btn-start {
   header .view-image {
     max-width: 40rem;
   }
-  #main-content .course-list .card {
-    max-width: 35rem;
-    height: 45rem;
-  }
   #main-content .course-list .card-title {
     font-size: 3rem;
-    margin: 20rem 0 1.2rem 0;
-    width: 21rem;
+    margin: 13.5rem 0 1.2rem 0;
+  }
+  #main-content .course-list .card-text {
+    font-size: 1.3rem;
+  }
+  #main-content .course-list .card-body {
+    padding: 0 1.2rem !important;
   }
 }
 
@@ -338,6 +351,15 @@ header .view-content #btn-start {
   }
   header .view-image {
     max-width: 35rem;
+  }
+  #main-content .course-list .card {
+    max-width: 40rem;
+  }
+  #main-content .course-list .col:nth-child(3) .card-title {
+    max-width: 20rem;
+  }
+  #main-content .course-list .col:nth-child(3) .card-text {
+    max-width: 30rem;
   }
 }
 
@@ -368,6 +390,24 @@ header .view-content #btn-start {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #main-content .course-list .card-title {
+    font-size: 2.8rem;
+  }
+  #main-content .course-list .col:nth-child(2) .card-title {
+    max-width: 10rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #main-content .course-list .card {
+    margin: 0 auto;
+  }
+  #main-content .course-list .col:nth-child(1) .card-title {
+    max-width: 20rem;
+  }
+}
+
 @media screen and (max-width: 425px) {
   header .view-content {
     width: 100%;
@@ -379,6 +419,12 @@ header .view-content #btn-start {
   }
   header .view-content p {
     font-size: 1.4rem;
+  }
+  #main-content .course-header {
+    font-size: 3.2rem;
+  }
+  #main-content .course-list .card-title {
+    font-size: 2.4rem;
   }
 }
 /*# sourceMappingURL=landing-page.css.map */

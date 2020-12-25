@@ -1,5 +1,6 @@
 @import './utils/variable';
 
+// Web First Design (1920 x 1080)
 :root {
 	font-size: 62.5%;
 }
@@ -113,6 +114,7 @@ header {
 			padding-bottom: 6.4rem;
 			font-size: 4.6rem;
 			font-weight: 500;
+			margin: 0;
 
 			span {
 				font-weight: 600;
@@ -126,8 +128,6 @@ header {
 			justify-content: space-between;
 
 			.card {
-				max-width: 42.7rem;
-				height: 48.5rem;
 				box-shadow: none;
 				border-radius: 2rem;
 
@@ -139,6 +139,7 @@ header {
 
 				&-body {
 					z-index: 10;
+					padding: 0 2rem !important;
 				}
 
 				&-title {
@@ -155,6 +156,7 @@ header {
 
 				&-author {
 					display: flex;
+					margin-bottom: 2.5rem;
 
 					.author-image {
 						margin-right: 1.6rem;
@@ -182,9 +184,23 @@ header {
 				}
 			}
 
-			.card:nth-child(2) {
-				h4 {
-					width: 16.4rem;
+			.col:nth-child(1) {
+				.card {
+					&-text {
+						max-width: 30rem;
+					}
+				}
+			}
+
+			.col:nth-child(2) {
+				.card {
+					&-title {
+						max-width: 17rem;
+					}
+
+					&-text {
+						max-width: 25rem;
+					}
 				}
 			}
 		}
@@ -294,6 +310,14 @@ header {
 						font-size: 1.4rem;
 					}
 				}
+
+				.col:nth-child(1) {
+					.card {
+						&-text {
+							max-width: 27rem;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -325,21 +349,22 @@ header {
 		.course {
 			&-list {
 				.card {
-					max-width: 35rem;
-					height: 45rem;
-
 					&-title {
 						font-size: 3rem;
-						margin: 20rem 0 1.2rem 0;
-						width: 21rem;
+						margin: 13.5rem 0 1.2rem 0;
+					}
+
+					&-text {
+						font-size: 1.3rem;
+					}
+
+					&-body {
+						padding: 0 1.2rem !important;
 					}
 				}
 			}
 		}
 	}
-}
-
-@media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 991px) {
@@ -353,6 +378,27 @@ header {
 		.view {
 			&-image {
 				max-width: 35rem;
+			}
+		}
+	}
+
+	#main-content {
+		.course {
+			&-list {
+				.card {
+					max-width: 40rem;
+				}
+
+				.col:nth-child(3) {
+					.card {
+						&-title {
+							max-width: 20rem;
+						}
+						&-text {
+							max-width: 30rem;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -387,6 +433,48 @@ header {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	#main-content {
+		.course {
+			&-list {
+				.card {
+					&-title {
+						font-size: 2.8rem;
+					}
+				}
+
+				.col:nth-child(2) {
+					.card {
+						&-title {
+							max-width: 10rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#main-content {
+		.course {
+			&-list {
+				.card {
+					margin: 0 auto;
+				}
+
+				.col:nth-child(1) {
+					.card {
+						&-title {
+							max-width: 20rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 425px) {
 	header {
 		.view {
@@ -401,6 +489,21 @@ header {
 
 				p {
 					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+
+	#main-content {
+		.course {
+			&-header {
+				font-size: 3.2rem;
+			}
+			&-list {
+				.card {
+					&-title {
+						font-size: 2.4rem;
+					}
 				}
 			}
 		}
