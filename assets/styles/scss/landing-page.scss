@@ -127,6 +127,10 @@ header {
 			flex-wrap: wrap;
 			justify-content: space-between;
 
+			.col {
+				max-width: 42.7rem;
+			}
+
 			.card {
 				box-shadow: none;
 				border-radius: 2rem;
@@ -203,31 +207,47 @@ header {
 					}
 				}
 			}
+
+			.col:nth-child(3) {
+				.card {
+					&-text {
+						max-width: 40rem;
+					}
+				}
+			}
 		}
 	}
 
 	.benefit {
 		color: #1d1d11;
-		padding-bottom: 25.6rem;
+		padding: 0 11.2% 25.6rem 11.2% !important;
+		margin: 0;
+
+		&-content {
+			padding-left: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 
 		&-header {
 			font-size: 7rem;
 			font-weight: 600;
-			width: 44.7rem;
+			max-width: 44.7rem;
 			margin-bottom: 0;
 		}
 
 		&-caption {
 			font-size: 3.2rem;
 			font-weight: 300;
-			width: 44.7rem;
+			max-width: 44.7rem;
 			margin-bottom: 6.4rem;
 		}
 
 		&-list {
 			display: flex;
 			align-items: center;
-			margin-bottom: 7.5rem;
 
 			img {
 				margin-right: 4.6rem;
@@ -244,6 +264,10 @@ header {
 				box-shadow: 0 1rem 3.2rem #eaeaea;
 				border-radius: 1.5rem;
 			}
+		}
+
+		&-list:nth-child(3) {
+			margin-bottom: 7.5rem;
 		}
 	}
 }
@@ -296,7 +320,7 @@ header {
 			padding: 13.2rem 8% 15.6rem 8%;
 
 			&-header {
-				font-size: 4rem;
+				font-size: 5rem;
 			}
 
 			&-list {
@@ -318,6 +342,37 @@ header {
 						}
 					}
 				}
+
+				.col:nth-child(3) {
+					.card {
+						&-text {
+							max-width: 35rem;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			padding: 0 8% 25.6rem 8% !important;
+
+			&-header {
+				font-size: 5rem;
+			}
+
+			&-caption {
+				font-size: 2.8rem;
+				max-width: 40rem;
+			}
+
+			&-list {
+				p {
+					font-size: 2.8rem;
+				}
+			}
+
+			&-illustration {
+				max-width: 70rem;
 			}
 		}
 	}
@@ -347,6 +402,10 @@ header {
 
 	#main-content {
 		.course {
+			&-header {
+				font-size: 4rem;
+			}
+
 			&-list {
 				.card {
 					&-title {
@@ -362,6 +421,45 @@ header {
 						padding: 0 1.2rem !important;
 					}
 				}
+
+				.col:nth-child(3) {
+					.card {
+						&-title {
+							max-width: 20rem;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-header {
+				font-size: 4rem;
+			}
+
+			&-caption {
+				font-size: 2.4rem;
+				max-width: 35rem;
+			}
+
+			&-list {
+				p {
+					font-size: 2.4rem;
+				}
+			}
+
+			&-illustration {
+				max-width: 50rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#main-content {
+		.benefit {
+			&-illustration {
+				max-width: 42.5rem;
 			}
 		}
 	}
@@ -401,6 +499,34 @@ header {
 				}
 			}
 		}
+
+		.benefit {
+			&-header {
+				font-size: 3rem;
+				max-width: 20rem;
+			}
+
+			&-caption {
+				font-size: 2rem;
+				max-width: 30rem;
+			}
+
+			&-list {
+				img {
+					margin-right: 2rem;
+				}
+
+				p {
+					font-size: 2rem;
+					width: 20rem;
+					padding: 1.2rem;
+				}
+			}
+
+			&-illustration {
+				max-width: 40rem;
+			}
+		}
 	}
 }
 
@@ -431,6 +557,45 @@ header {
 			}
 		}
 	}
+
+	#main-content {
+		.benefit {
+			&-content {
+				align-items: center;
+				width: 100%;
+				padding: 0;
+				text-align: center;
+			}
+
+			&-header {
+				font-size: 4rem;
+				max-width: 100%;
+				margin-bottom: 1.2rem;
+			}
+
+			&-caption {
+				font-size: 2.8rem;
+				max-width: 40rem;
+			}
+
+			&-list {
+				img {
+					margin-right: 4.6rem;
+				}
+
+				p {
+					text-align: center;
+					font-size: 2.8rem;
+					padding: 1.2rem 6rem;
+					width: 30rem;
+				}
+			}
+
+			&-illustration {
+				display: none;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -440,6 +605,12 @@ header {
 				.card {
 					&-title {
 						font-size: 2.8rem;
+					}
+
+					&-text {
+						@media screen and (max-width: 624px) {
+							max-width: 16rem !important;
+						}
 					}
 				}
 
@@ -452,6 +623,16 @@ header {
 				}
 			}
 		}
+
+		.benefit {
+			&-caption {
+				margin-bottom: 5rem;
+			}
+
+			&-list:nth-child(3) {
+				margin-bottom: 5rem;
+			}
+		}
 	}
 }
 
@@ -459,8 +640,12 @@ header {
 	#main-content {
 		.course {
 			&-list {
+				justify-content: center;
+
 				.card {
-					margin: 0 auto;
+					&-text {
+						max-width: 25rem !important;
+					}
 				}
 
 				.col:nth-child(1) {
@@ -469,6 +654,23 @@ header {
 							max-width: 20rem;
 						}
 					}
+				}
+
+				.col:nth-child(3) {
+					.card {
+						&-text {
+							max-width: 30rem !important;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-list {
+				p {
+					width: 100%;
+					max-width: 25rem;
 				}
 			}
 		}
@@ -499,12 +701,42 @@ header {
 			&-header {
 				font-size: 3.2rem;
 			}
+
 			&-list {
 				.card {
 					&-title {
 						font-size: 2.4rem;
 					}
 				}
+			}
+		}
+
+		.benefit {
+			&-header {
+				font-size: 3.2rem;
+			}
+
+			&-caption {
+				font-size: 2rem;
+				width: 100%;
+				max-width: 100%;
+			}
+
+			&-list {
+				img {
+					margin-right: 2rem;
+					width: 3.6rem;
+				}
+
+				p {
+					font-size: 2rem;
+					width: 20rem;
+					padding: 1.2rem;
+				}
+			}
+
+			&-list:nth-child(3) {
+				margin-bottom: 3rem;
 			}
 		}
 	}

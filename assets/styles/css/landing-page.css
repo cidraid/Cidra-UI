@@ -152,6 +152,10 @@ header .view-content #btn-start {
           justify-content: space-between;
 }
 
+#main-content .course-list .col {
+  max-width: 42.7rem;
+}
+
 #main-content .course-list .card {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -224,22 +228,43 @@ header .view-content #btn-start {
   max-width: 25rem;
 }
 
+#main-content .course-list .col:nth-child(3) .card-text {
+  max-width: 40rem;
+}
+
 #main-content .benefit {
   color: #1d1d11;
-  padding-bottom: 25.6rem;
+  padding: 0 11.2% 25.6rem 11.2% !important;
+  margin: 0;
+}
+
+#main-content .benefit-content {
+  padding-left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #main-content .benefit-header {
   font-size: 7rem;
   font-weight: 600;
-  width: 44.7rem;
+  max-width: 44.7rem;
   margin-bottom: 0;
 }
 
 #main-content .benefit-caption {
   font-size: 3.2rem;
   font-weight: 300;
-  width: 44.7rem;
+  max-width: 44.7rem;
   margin-bottom: 6.4rem;
 }
 
@@ -250,7 +275,6 @@ header .view-content #btn-start {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 7.5rem;
 }
 
 #main-content .benefit-list img {
@@ -268,6 +292,10 @@ header .view-content #btn-start {
   -webkit-box-shadow: 0 1rem 3.2rem #eaeaea;
           box-shadow: 0 1rem 3.2rem #eaeaea;
   border-radius: 1.5rem;
+}
+
+#main-content .benefit-list:nth-child(3) {
+  margin-bottom: 7.5rem;
 }
 
 @media screen and (max-width: 1600px) {
@@ -305,7 +333,7 @@ header .view-content #btn-start {
     padding: 13.2rem 8% 15.6rem 8%;
   }
   #main-content .course-header {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   #main-content .course-list .card-title {
     font-size: 4rem;
@@ -316,6 +344,25 @@ header .view-content #btn-start {
   }
   #main-content .course-list .col:nth-child(1) .card-text {
     max-width: 27rem;
+  }
+  #main-content .course-list .col:nth-child(3) .card-text {
+    max-width: 35rem;
+  }
+  #main-content .benefit {
+    padding: 0 8% 25.6rem 8% !important;
+  }
+  #main-content .benefit-header {
+    font-size: 5rem;
+  }
+  #main-content .benefit-caption {
+    font-size: 2.8rem;
+    max-width: 40rem;
+  }
+  #main-content .benefit-list p {
+    font-size: 2.8rem;
+  }
+  #main-content .benefit-illustration {
+    max-width: 70rem;
   }
 }
 
@@ -333,6 +380,9 @@ header .view-content #btn-start {
   header .view-image {
     max-width: 40rem;
   }
+  #main-content .course-header {
+    font-size: 4rem;
+  }
   #main-content .course-list .card-title {
     font-size: 3rem;
     margin: 13.5rem 0 1.2rem 0;
@@ -342,6 +392,28 @@ header .view-content #btn-start {
   }
   #main-content .course-list .card-body {
     padding: 0 1.2rem !important;
+  }
+  #main-content .course-list .col:nth-child(3) .card-title {
+    max-width: 20rem;
+  }
+  #main-content .benefit-header {
+    font-size: 4rem;
+  }
+  #main-content .benefit-caption {
+    font-size: 2.4rem;
+    max-width: 35rem;
+  }
+  #main-content .benefit-list p {
+    font-size: 2.4rem;
+  }
+  #main-content .benefit-illustration {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #main-content .benefit-illustration {
+    max-width: 42.5rem;
   }
 }
 
@@ -360,6 +432,25 @@ header .view-content #btn-start {
   }
   #main-content .course-list .col:nth-child(3) .card-text {
     max-width: 30rem;
+  }
+  #main-content .benefit-header {
+    font-size: 3rem;
+    max-width: 20rem;
+  }
+  #main-content .benefit-caption {
+    font-size: 2rem;
+    max-width: 30rem;
+  }
+  #main-content .benefit-list img {
+    margin-right: 2rem;
+  }
+  #main-content .benefit-list p {
+    font-size: 2rem;
+    width: 20rem;
+    padding: 1.2rem;
+  }
+  #main-content .benefit-illustration {
+    max-width: 40rem;
   }
 }
 
@@ -388,23 +479,79 @@ header .view-content #btn-start {
   header .view-image {
     display: none !important;
   }
+  #main-content .benefit-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  #main-content .benefit-header {
+    font-size: 4rem;
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+  }
+  #main-content .benefit-caption {
+    font-size: 2.8rem;
+    max-width: 40rem;
+  }
+  #main-content .benefit-list img {
+    margin-right: 4.6rem;
+  }
+  #main-content .benefit-list p {
+    text-align: center;
+    font-size: 2.8rem;
+    padding: 1.2rem 6rem;
+    width: 30rem;
+  }
+  #main-content .benefit-illustration {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
   #main-content .course-list .card-title {
     font-size: 2.8rem;
   }
+}
+
+@media screen and (max-width: 768px) and (max-width: 624px) {
+  #main-content .course-list .card-text {
+    max-width: 16rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
   #main-content .course-list .col:nth-child(2) .card-title {
     max-width: 10rem;
+  }
+  #main-content .benefit-caption {
+    margin-bottom: 5rem;
+  }
+  #main-content .benefit-list:nth-child(3) {
+    margin-bottom: 5rem;
   }
 }
 
 @media screen and (max-width: 575px) {
-  #main-content .course-list .card {
-    margin: 0 auto;
+  #main-content .course-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-content .course-list .card-text {
+    max-width: 25rem !important;
   }
   #main-content .course-list .col:nth-child(1) .card-title {
     max-width: 20rem;
+  }
+  #main-content .course-list .col:nth-child(3) .card-text {
+    max-width: 30rem !important;
+  }
+  #main-content .benefit-list p {
+    width: 100%;
+    max-width: 25rem;
   }
 }
 
@@ -425,6 +572,26 @@ header .view-content #btn-start {
   }
   #main-content .course-list .card-title {
     font-size: 2.4rem;
+  }
+  #main-content .benefit-header {
+    font-size: 3.2rem;
+  }
+  #main-content .benefit-caption {
+    font-size: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  #main-content .benefit-list img {
+    margin-right: 2rem;
+    width: 3.6rem;
+  }
+  #main-content .benefit-list p {
+    font-size: 2rem;
+    width: 20rem;
+    padding: 1.2rem;
+  }
+  #main-content .benefit-list:nth-child(3) {
+    margin-bottom: 3rem;
   }
 }
 /*# sourceMappingURL=landing-page.css.map */
