@@ -125,8 +125,7 @@ header .view-content #btn-start {
 
 #main-content .course {
   color: #1d1d11;
-  padding-top: 13.2rem;
-  padding: 13.2rem 1.2rem 15.6rem 1.2rem;
+  padding: 13.2rem 11.2% 15.6rem 11.2%;
 }
 
 #main-content .course-header {
@@ -145,6 +144,8 @@ header .view-content #btn-start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -266,58 +267,81 @@ header .view-content #btn-start {
   }
   header .navbar #btn-register,
   header .navbar #btn-login {
-    font-size: 1.6em;
+    font-size: 1.6rem;
     padding: 1rem 1.6rem;
     width: 10rem;
   }
   header .view-inner {
     padding: 0 8% !important;
   }
+  header .view-content {
+    width: 43rem;
+  }
   header .view-content h1 {
-    font-size: 5.4rem;
+    font-size: 5rem;
     line-height: 7rem;
+  }
+  header .view-content p {
+    font-size: 1.8rem;
+  }
+  header .view-content #btn-start {
+    font-size: 1.6rem;
+    padding: 1rem 1.6rem;
+    width: 10rem;
   }
   header .view-image {
     max-width: 60rem;
   }
-}
-
-@media screen and (max-width: 1600px) and (max-width: 1430px) {
-  header .view-image {
-    max-width: 50rem;
+  #main-content .course {
+    padding: 13.2rem 8% 15.6rem 8%;
+  }
+  #main-content .course-header {
+    font-size: 4rem;
+  }
+  #main-content .course-list .card-title {
+    font-size: 4rem;
+    margin: 17.7rem 0 1.2rem 0;
+  }
+  #main-content .course-list .card-text {
+    font-size: 1.4rem;
   }
 }
 
 @media screen and (max-width: 1366px) {
+  header .view-content {
+    width: 35rem;
+  }
   header .view-content h1 {
-    font-size: 4.8rem;
-    line-height: 7rem;
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+  header .view-content p {
+    font-size: 1.6rem;
   }
   header .view-image {
     max-width: 40rem;
   }
+  #main-content .course-list .card {
+    max-width: 35rem;
+    height: 45rem;
+  }
+  #main-content .course-list .card-title {
+    font-size: 3rem;
+    margin: 20rem 0 1.2rem 0;
+    width: 21rem;
+  }
 }
 
-@media screen and (max-width: 1200px) {
-  header .view-content {
-    width: 50rem;
-  }
-  header .view-content h1 {
-    font-size: 3.2rem;
-    line-height: 5rem;
+@media screen and (max-width: 991px) {
+  header .nav-item a {
+    margin: 0 0 1.2rem auto !important;
   }
   header .view-image {
-    max-width: 30rem;
+    max-width: 35rem;
   }
 }
 
-@media screen and (max-width: 992px) {
-  header .nav-item {
-    margin-left: auto;
-  }
-  header .nav-item a {
-    margin: 0 0 1.2rem 0 !important;
-  }
+@media screen and (max-width: 835px) {
   header .view-inner {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -330,28 +354,31 @@ header .view-content #btn-start {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    text-align: center;
   }
   header .view-content h1 {
     text-align: center;
-    font-size: 4.8rem;
-    line-height: 6rem;
-    margin-bottom: 5rem;
-  }
-  header .view-content p:nth-child(4) {
-    margin-bottom: 5rem;
+    margin-bottom: 2.4rem;
   }
   header .view-content #btn-start {
-    margin-top: 0;
+    margin-top: 3rem;
   }
   header .view-image {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1490px !important;
+@media screen and (max-width: 425px) {
+  header .view-content {
+    width: 100%;
+  }
+  header .view-content h1 {
+    max-width: 25rem;
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+  header .view-content p {
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=landing-page.css.map */

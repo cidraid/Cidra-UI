@@ -20,7 +20,6 @@ header,
 	height: 100%;
 }
 
-// Header Section
 header {
 	background-color: $primary-color;
 	padding: 0 !important;
@@ -101,16 +100,13 @@ header {
 		}
 	}
 }
-// End Header Section
 
-// Main Section
 #main-content {
 	background-color: #f5f5f7;
 
 	.course {
 		color: #1d1d11;
-		padding-top: 13.2rem;
-		padding: 13.2rem 1.2rem 15.6rem 1.2rem;
+		padding: 13.2rem 11.2% 15.6rem 11.2%;
 
 		&-header {
 			text-align: center;
@@ -126,6 +122,7 @@ header {
 
 		&-list {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: space-between;
 
 			.card {
@@ -234,7 +231,6 @@ header {
 		}
 	}
 }
-// End Main Section
 
 @media screen and (max-width: 1600px) {
 	header {
@@ -243,7 +239,7 @@ header {
 
 			#btn-register,
 			#btn-login {
-				font-size: 1.6em;
+				font-size: 1.6rem;
 				padding: 1rem 1.6rem;
 				width: 10rem;
 			}
@@ -255,17 +251,48 @@ header {
 			}
 
 			&-content {
+				width: 43rem;
+
 				h1 {
-					font-size: 5.4rem;
+					font-size: 5rem;
 					line-height: 7rem;
+				}
+
+				p {
+					font-size: 1.8rem;
+				}
+
+				#btn-start {
+					font-size: 1.6rem;
+					padding: 1rem 1.6rem;
+					width: 10rem;
 				}
 			}
 
 			&-image {
 				max-width: 60rem;
+			}
+		}
+	}
 
-				@media screen and (max-width: 1430px) {
-					max-width: 50rem;
+	#main-content {
+		.course {
+			padding: 13.2rem 8% 15.6rem 8%;
+
+			&-header {
+				font-size: 4rem;
+			}
+
+			&-list {
+				.card {
+					&-title {
+						font-size: 4rem;
+						margin: 17.7rem 0 1.2rem 0;
+					}
+
+					&-text {
+						font-size: 1.4rem;
+					}
 				}
 			}
 		}
@@ -276,9 +303,15 @@ header {
 	header {
 		.view {
 			&-content {
+				width: 35rem;
+
 				h1 {
-					font-size: 4.8rem;
-					line-height: 7rem;
+					font-size: 4rem;
+					line-height: 6rem;
+				}
+
+				p {
+					font-size: 1.6rem;
 				}
 			}
 
@@ -287,37 +320,46 @@ header {
 			}
 		}
 	}
-}
 
-@media screen and (max-width: 1200px) {
-	header {
-		.view {
-			&-content {
-				width: 50rem;
+	#main-content {
+		.course {
+			&-list {
+				.card {
+					max-width: 35rem;
+					height: 45rem;
 
-				h1 {
-					font-size: 3.2rem;
-					line-height: 5rem;
+					&-title {
+						font-size: 3rem;
+						margin: 20rem 0 1.2rem 0;
+						width: 21rem;
+					}
 				}
-			}
-
-			&-image {
-				max-width: 30rem;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 991px) {
 	header {
 		.nav-item {
-			margin-left: auto;
-
 			a {
-				margin: 0 0 1.2rem 0 !important;
+				margin: 0 0 1.2rem auto !important;
 			}
 		}
 
+		.view {
+			&-image {
+				max-width: 35rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 835px) {
+	header {
 		.view {
 			&-inner {
 				justify-content: center;
@@ -326,21 +368,15 @@ header {
 			&-content {
 				justify-content: center;
 				align-items: center;
-				width: 100%;
+				text-align: center;
 
 				h1 {
 					text-align: center;
-					font-size: 4.8rem;
-					line-height: 6rem;
-					margin-bottom: 5rem;
-				}
-
-				p:nth-child(4) {
-					margin-bottom: 5rem;
+					margin-bottom: 2.4rem;
 				}
 
 				#btn-start {
-					margin-top: 0;
+					margin-top: 3rem;
 				}
 			}
 
@@ -351,8 +387,22 @@ header {
 	}
 }
 
-@media screen and (min-width: 1200px) {
-	.container {
-		max-width: 1490px !important;
+@media screen and (max-width: 425px) {
+	header {
+		.view {
+			&-content {
+				width: 100%;
+
+				h1 {
+					max-width: 25rem;
+					font-size: 2.8rem;
+					line-height: 4rem;
+				}
+
+				p {
+					font-size: 1.4rem;
+				}
+			}
+		}
 	}
 }
