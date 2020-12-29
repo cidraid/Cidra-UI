@@ -1,5 +1,6 @@
 @import './utils/variable';
 
+// Web First Design (1920 x 1080)
 :root {
 	font-size: 62.5%;
 }
@@ -10,6 +11,7 @@ body {
 
 * {
 	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
 }
 
 html,
@@ -19,13 +21,13 @@ header,
 	height: 100%;
 }
 
-// Header Section
 header {
 	background-color: $primary-color;
+	padding: 0 !important;
 
 	.navbar {
 		background-color: $primary-color;
-		padding: 4.6rem 21.5rem !important;
+		padding: 2.4% 11.2% !important;
 		box-shadow: none;
 
 		&-brand img {
@@ -61,7 +63,9 @@ header {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			margin-top: 5rem;
+			margin: 5rem 0 0 0;
+			padding: 0 11.2% !important;
+			max-width: 100% !important;
 		}
 
 		&-content {
@@ -97,22 +101,20 @@ header {
 		}
 	}
 }
-// End Header Section
 
-// Main Section
 #main-content {
 	background-color: #f5f5f7;
 
 	.course {
 		color: #1d1d11;
-		padding-top: 13.2rem;
-		padding: 13.2rem 1.2rem 15.6rem 1.2rem;
+		padding: 13.2rem 11.2% 15.6rem 11.2%;
 
 		&-header {
 			text-align: center;
 			padding-bottom: 6.4rem;
 			font-size: 4.6rem;
 			font-weight: 500;
+			margin: 0;
 
 			span {
 				font-weight: 600;
@@ -122,11 +124,14 @@ header {
 
 		&-list {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: space-between;
 
-			.card {
+			.col {
 				max-width: 42.7rem;
-				height: 48.5rem;
+			}
+
+			.card {
 				box-shadow: none;
 				border-radius: 2rem;
 
@@ -138,6 +143,7 @@ header {
 
 				&-body {
 					z-index: 10;
+					padding: 0 2rem !important;
 				}
 
 				&-title {
@@ -154,6 +160,7 @@ header {
 
 				&-author {
 					display: flex;
+					margin-bottom: 2.5rem;
 
 					.author-image {
 						margin-right: 1.6rem;
@@ -181,9 +188,31 @@ header {
 				}
 			}
 
-			.card:nth-child(2) {
-				h4 {
-					width: 16.4rem;
+			.col:nth-child(1) {
+				.card {
+					&-text {
+						max-width: 30rem;
+					}
+				}
+			}
+
+			.col:nth-child(2) {
+				.card {
+					&-title {
+						max-width: 17rem;
+					}
+
+					&-text {
+						max-width: 25rem;
+					}
+				}
+			}
+
+			.col:nth-child(3) {
+				.card {
+					&-text {
+						max-width: 40rem;
+					}
 				}
 			}
 		}
@@ -191,26 +220,34 @@ header {
 
 	.benefit {
 		color: #1d1d11;
-		padding-bottom: 25.6rem;
+		padding: 0 11.2% 25.6rem 11.2% !important;
+		margin: 0;
+
+		&-content {
+			padding-left: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 
 		&-header {
 			font-size: 7rem;
 			font-weight: 600;
-			width: 44.7rem;
+			max-width: 44.7rem;
 			margin-bottom: 0;
 		}
 
 		&-caption {
 			font-size: 3.2rem;
 			font-weight: 300;
-			width: 44.7rem;
+			max-width: 44.7rem;
 			margin-bottom: 6.4rem;
 		}
 
 		&-list {
 			display: flex;
 			align-items: center;
-			margin-bottom: 7.5rem;
 
 			img {
 				margin-right: 4.6rem;
@@ -228,12 +265,479 @@ header {
 				border-radius: 1.5rem;
 			}
 		}
+
+		&-list:nth-child(3) {
+			margin-bottom: 7.5rem;
+		}
 	}
 }
-// End Main Section
 
-@media screen and (min-width: 1200px) {
-	.container {
-		max-width: 1490px !important;
+@media screen and (max-width: 1600px) {
+	header {
+		.navbar {
+			padding: 1% 8% !important;
+
+			#btn-register,
+			#btn-login {
+				font-size: 1.6rem;
+				padding: 1rem 1.6rem;
+				width: 10rem;
+			}
+		}
+
+		.view {
+			&-inner {
+				padding: 0 8% !important;
+			}
+
+			&-content {
+				width: 43rem;
+
+				h1 {
+					font-size: 5rem;
+					line-height: 7rem;
+				}
+
+				p {
+					font-size: 1.8rem;
+				}
+
+				#btn-start {
+					font-size: 1.6rem;
+					padding: 1rem 1.6rem;
+					width: 10rem;
+				}
+			}
+
+			&-image {
+				max-width: 60rem;
+			}
+		}
+	}
+
+	#main-content {
+		.course {
+			padding: 13.2rem 8% 15.6rem 8%;
+
+			&-header {
+				font-size: 5rem;
+			}
+
+			&-list {
+				.card {
+					&-title {
+						font-size: 4rem;
+						margin: 17.7rem 0 1.2rem 0;
+					}
+
+					&-text {
+						font-size: 1.4rem;
+					}
+				}
+
+				.col:nth-child(1) {
+					.card {
+						&-text {
+							max-width: 27rem;
+						}
+					}
+				}
+
+				.col:nth-child(3) {
+					.card {
+						&-text {
+							max-width: 35rem;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			padding: 0 8% 25.6rem 8% !important;
+
+			&-header {
+				font-size: 5rem;
+			}
+
+			&-caption {
+				font-size: 2.8rem;
+				max-width: 40rem;
+			}
+
+			&-list {
+				p {
+					font-size: 2.8rem;
+				}
+			}
+
+			&-illustration {
+				max-width: 70rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	header {
+		.view {
+			&-content {
+				width: 35rem;
+
+				h1 {
+					font-size: 4rem;
+					line-height: 6rem;
+				}
+
+				p {
+					font-size: 1.6rem;
+				}
+			}
+
+			&-image {
+				max-width: 40rem;
+			}
+		}
+	}
+
+	#main-content {
+		.course {
+			&-header {
+				font-size: 4rem;
+			}
+
+			&-list {
+				.card {
+					&-title {
+						font-size: 3rem;
+						margin: 13.5rem 0 1.2rem 0;
+					}
+
+					&-text {
+						font-size: 1.3rem;
+					}
+
+					&-body {
+						padding: 0 1.2rem !important;
+					}
+				}
+
+				.col:nth-child(3) {
+					.card {
+						&-title {
+							max-width: 20rem;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-header {
+				font-size: 4rem;
+			}
+
+			&-caption {
+				font-size: 2.4rem;
+				max-width: 35rem;
+			}
+
+			&-list {
+				p {
+					font-size: 2.4rem;
+				}
+			}
+
+			&-illustration {
+				max-width: 50rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#main-content {
+		.benefit {
+			&-illustration {
+				max-width: 42.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	header {
+		.nav-item {
+			a {
+				margin: 0 0 1.2rem auto !important;
+			}
+		}
+
+		.view {
+			&-image {
+				max-width: 35rem;
+			}
+		}
+	}
+
+	#main-content {
+		.course {
+			&-list {
+				.card {
+					max-width: 40rem;
+				}
+
+				.col:nth-child(3) {
+					.card {
+						&-title {
+							max-width: 20rem;
+						}
+						&-text {
+							max-width: 30rem;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-header {
+				font-size: 3rem;
+				max-width: 20rem;
+			}
+
+			&-caption {
+				font-size: 2rem;
+				max-width: 30rem;
+			}
+
+			&-list {
+				img {
+					margin-right: 2rem;
+				}
+
+				p {
+					font-size: 2rem;
+					width: 20rem;
+					padding: 1.2rem;
+				}
+			}
+
+			&-illustration {
+				max-width: 40rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 835px) {
+	header {
+		.view {
+			&-inner {
+				justify-content: center;
+			}
+
+			&-content {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+
+				h1 {
+					text-align: center;
+					margin-bottom: 2.4rem;
+				}
+
+				#btn-start {
+					margin-top: 3rem;
+				}
+			}
+
+			&-image {
+				display: none !important;
+			}
+		}
+	}
+
+	#main-content {
+		.benefit {
+			&-content {
+				align-items: center;
+				width: 100%;
+				padding: 0;
+				text-align: center;
+			}
+
+			&-header {
+				font-size: 4rem;
+				max-width: 100%;
+				margin-bottom: 1.2rem;
+			}
+
+			&-caption {
+				font-size: 2.8rem;
+				max-width: 40rem;
+			}
+
+			&-list {
+				img {
+					margin-right: 4.6rem;
+				}
+
+				p {
+					text-align: center;
+					font-size: 2.8rem;
+					padding: 1.2rem 6rem;
+					width: 30rem;
+				}
+			}
+
+			&-illustration {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#main-content {
+		.course {
+			&-list {
+				.card {
+					&-title {
+						font-size: 2.8rem;
+					}
+
+					&-text {
+						@media screen and (max-width: 624px) {
+							max-width: 16rem !important;
+						}
+					}
+				}
+
+				.col:nth-child(2) {
+					.card {
+						&-title {
+							max-width: 10rem;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-caption {
+				margin-bottom: 5rem;
+			}
+
+			&-list:nth-child(3) {
+				margin-bottom: 5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#main-content {
+		.course {
+			&-list {
+				justify-content: center;
+
+				.card {
+					&-text {
+						max-width: 25rem !important;
+					}
+				}
+
+				.col:nth-child(1) {
+					.card {
+						&-title {
+							max-width: 20rem;
+						}
+					}
+				}
+
+				.col:nth-child(3) {
+					.card {
+						&-text {
+							max-width: 30rem !important;
+						}
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-list {
+				p {
+					width: 100%;
+					max-width: 25rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	header {
+		.view {
+			&-content {
+				width: 100%;
+
+				h1 {
+					max-width: 25rem;
+					font-size: 2.8rem;
+					line-height: 4rem;
+				}
+
+				p {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+
+	#main-content {
+		.course {
+			&-header {
+				font-size: 3.2rem;
+			}
+
+			&-list {
+				.card {
+					&-title {
+						font-size: 2.4rem;
+					}
+				}
+			}
+		}
+
+		.benefit {
+			&-header {
+				font-size: 3.2rem;
+			}
+
+			&-caption {
+				font-size: 2rem;
+				width: 100%;
+				max-width: 100%;
+			}
+
+			&-list {
+				img {
+					margin-right: 2rem;
+					width: 3.6rem;
+				}
+
+				p {
+					font-size: 2rem;
+					width: 20rem;
+					padding: 1.2rem;
+				}
+			}
+
+			&-list:nth-child(3) {
+				margin-bottom: 3rem;
+			}
+		}
 	}
 }
